@@ -1,18 +1,31 @@
-import { ethers } from "hardhat";
+import hre from "hardhat";
+import { ethers } from "ethers";
 
 async function main() {
-  const [deployer] = await ethers.getSigners();
-  console.log("Deploying with:", deployer.address);
+  // Connect to local Hardhat node
+  const provider = new ethers.JsonRpcProvider("http://127.0.0.1:8545");
 
-  const Factory = await ethers.getContractFactory("CredentialRegistry");
-  const registry = await Factory.deploy(deployer.address);
-  await registry.waitForDeployment();
+  // Get signer (first account)
+  const signer = await provider.getSigner(0);
+  const adminAddress = await signer.getAddress();
 
-  console.log("CredentialRegistry:", await registry.getAddress());
+  // Load compiled contract artifact
+  const artifact = await hre.artifacts.readArtifact("CredentialRegistry");
+
+  // Create a ContractFactory using ethers v6
+  const factory = new ethers.ContractFactory(
+    artifact.abi,
+    artifact.bytecode,
+    signer
+  );
+
+  // Deploy with constructor argument (admin address)
+  const contract = await factory.deploy(adminAddress);
+
+  console.log("CredentialRegistry deployed at:", await contract.getAddress());
 }
 
-main().catch((e) => {
-  console.error(e);
-  process.exitCode = 1;
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
 });
-
