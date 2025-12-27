@@ -1,8 +1,3 @@
-Here is a **clean, merged README.md** with your **existing content kept intact** and the **Makefile section properly added** in a professional way.
-You can **replace your README.md entirely with this**.
-
----
-
 # Blockchain_based_student_system
 
 This project leverages **blockchain technology** to create a secure, transparent, and tamper-proof system for managing student academic records.
