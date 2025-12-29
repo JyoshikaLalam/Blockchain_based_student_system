@@ -175,25 +175,6 @@ GitHub reflects the intended and clean project state.
 
 
 
-Great idea 👍 — documenting this properly will **upgrade your repo instantly**.
-
-Below is a **ready-to-paste README section** that:
-
-1. **Clearly documents what is already implemented**
-2. **Explains the smart contract in a professional way**
-3. **Lists concrete “Next to Implement” steps** (so evaluators know the roadmap)
-
-You can paste this directly into your `README.md` (or split into sections if you want).
-
----
-
-# 📜 Blockchain-Based Student Credential System
-
-This project implements a **blockchain-backed credential registry** for issuing, revoking, and verifying academic credentials in a secure, tamper-proof, and privacy-preserving way.
-
-The current implementation focuses on the **core blockchain layer**, which serves as the single source of truth for credential integrity.
-
----
 
 ## ✅ What Is Implemented (Current Status)
 
@@ -383,11 +364,3 @@ Future work focuses on **integration, usability, and scalability**.
 
 ---
 
-If you want next, I can:
-
-* Rewrite this README to sound **more academic / final-year-project style**
-* Help you write the **API folder structure**
-* Convert this into **resume-ready bullet points**
-* Add a **system architecture diagram section**
-
-Just tell me what you want next 🚀
