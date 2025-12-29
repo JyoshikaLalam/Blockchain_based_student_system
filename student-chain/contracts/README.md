@@ -1,3 +1,42 @@
+✅ Fully Completed
+
+✔ CredentialRegistry smart contract
+
+✔ Role-based access control
+
+✔ Issue / revoke / verify logic
+
+✔ Events
+
+✔ Hardhat unit tests
+
+✔ Local deployment script
+
+🟡 Partially Completed
+
+🟡 Repo scaffolding
+
+🟡 README documentation
+
+🟡 ID logic (used, not documented)
+
+❌ Not Started Yet
+
+❌ API layer
+
+❌ AI service
+
+❌ Canonicalization spec
+
+❌ Storage
+
+❌ Indexer
+
+❌ Frontend
+
+❌ End-to-end integration
+
+
 # Sample Hardhat 3 Beta Project (`mocha` and `ethers`)
 
 This project showcases a Hardhat 3 Beta project using `mocha` for tests and the `ethers` library for Ethereum interactions.
