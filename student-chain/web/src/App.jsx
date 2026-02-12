@@ -1,21 +1,21 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Issue from "./pages/Issue";
-import Verify from "./pages/Verify";
-import Events from "./pages/Events";
+import UniversityDashboard from "./pages/university/UniversityDashboard";
+import FacultyDashboard from "./pages/faculty/FacultyDashboard";
+import StudentDashboard from "./pages/student/StudentDashboard";
+import VerifierDashboard from "./pages/verifier/VerifierDashboard";
 
 export default function App() {
   return (
     <Router>
-      <Navbar />
       <Routes>
-        {/* Default route */}
-        <Route path="/" element={<Navigate to="/issue" />} />
+        <Route path="/" element={<Navigate to="/university" />} />
+        <Route path="/university" element={<UniversityDashboard />} />
+        <Route path="/faculty" element={<FacultyDashboard />} />
+        <Route path="/student" element={<StudentDashboard />} />
+        <Route path="/verifier" element={<VerifierDashboard />} />
 
-        {/* Pages */}
-        <Route path="/issue" element={<Issue />} />
-        <Route path="/verify" element={<Verify />} />
-        <Route path="/events" element={<Events />} />
+        {/* Catch-all route */}
+        <Route path="*" element={<Navigate to="/university" />} />
       </Routes>
     </Router>
   );
