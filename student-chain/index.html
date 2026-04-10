@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EduChain Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>🎓 EduChain</h2>
+    <button onclick="showPage('home')">Dashboard</button>
+    <button onclick="showPage('issue')">Issue Credential</button>
+    <button onclick="showPage('verify')">Verify</button>
+    <button onclick="showPage('logs')">Event Logs</button>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- HOME -->
+    <section id="home" class="page">
+      <h1>Welcome Back 👋</h1>
+      <p class="subtitle">Blockchain Credential Management System</p>
+
+      <div class="cards">
+        <div class="card" onclick="showPage('issue')">
+          <h3>Issue Credential</h3>
+          <p>Create secure academic records</p>
+        </div>
+
+        <div class="card" onclick="showPage('verify')">
+          <h3>Verify Credential</h3>
+          <p>Check authenticity instantly</p>
+        </div>
+
+        <div class="card" onclick="showPage('logs')">
+          <h3>Event Logs</h3>
+          <p>Track all activities</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ISSUE -->
+    <section id="issue" class="page">
+      <div class="box">
+        <h2>Issue Credential</h2>
+        <form id="issueForm">
+          <input type="text" id="name" placeholder="Student Name" required>
+          <input type="text" id="roll" placeholder="Roll Number" required>
+          <input type="text" id="course" placeholder="Course" required>
+          <input type="text" id="grade" placeholder="Grade" required>
+          <input type="date" id="date" required>
+          <button type="submit">Issue</button>
+        </form>
+        <p id="issueResult"></p>
+      </div>
+    </section>
+
+    <!-- VERIFY -->
+    <section id="verify" class="page">
+      <div class="box">
+        <h2>Verify Credential</h2>
+        <input type="text" id="verifyHash" placeholder="Credential Hash">
+        <button onclick="verifyCredential()">Verify</button>
+        <div id="verifyResult"></div>
+      </div>
+    </section>
+
+    <!-- LOGS -->
+    <section id="logs" class="page">
+      <h2>Event Logs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Name</th>
+            <th>Hash</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="logTable"></tbody>
+      </table>
+    </section>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
